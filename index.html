@@ -74,6 +74,35 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
         }
+/* 1. Make the Card lift up */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Moves it up 10 pixels */
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.4); /* Makes the shadow deeper */
+}
+
+/* 2. Make the Image zoom slightly */
+.profile-img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover .profile-img {
+    transform: scale(1.1) rotate(5deg); /* Grows and tilts the photo */
+}
+/* 3. Make the Button pulse */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    letter-spacing: 2px; /* Spreads the letters out */
+    background-color: #ffffff;
+    color: #38bdf8;
+}
+        
     </style>
 </head>
 <body>
